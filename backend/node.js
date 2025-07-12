@@ -1,15 +1,25 @@
-const express=require("express");
-require("./models/Users")
-const app=express();
+const express = require("express");
+const app = express();
+
+const Authrouters=require("./Routers/Authrouters")
+require("./models/db");
 require("dotenv").config();
 
-const port=process.env.PORT || 3000;
+const bodyparse = require("body-parser");
+const cors = require("cors");
 
-app.get('/',(req,res)=>{
-    res.send("hello");
-})
+app.use(bodyparse.json());
+app.use(cors());
 
-app.listen(port,()=>{
-    
-    console.log("Server is running")
-})
+const port = process.env.PORT || 3000;
+
+
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
+app.use('/auth',Authrouters)
+
+app.listen(port, () => {
+  console.log("Server is running");
+});
