@@ -29,7 +29,7 @@ const Login = () => {
         }
 
         try{
-            const url="http://localhost:3000/auth/login"
+            const url="https://todo-app-api-gold.vercel.app/auth/login"
             const response=await fetch(url,{
                 method:"post",
                 headers: {
