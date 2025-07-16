@@ -19,11 +19,11 @@ body{
   width: 100%;
 }
 
-body{
+/* body{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

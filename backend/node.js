@@ -11,10 +11,9 @@ const cors = require("cors");
 app.use(bodyparse.json());
 app.use(cors());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4300;
 
-
-app.get("/", (req, res) => {
+app.get("/log", (req, res) => {
   res.send("hello");
 });
 
