@@ -29,7 +29,7 @@ const Signup = () => {
         }
 
         try{
-            const url="http://localhost:3000/auth/signup"
+            const url="https://todo-app-api-gold.vercel.app/auth/signup"
             const response=await fetch(url,{
                 method:"post",
                 headers: {
